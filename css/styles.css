@@ -1,0 +1,237 @@
+html {
+    font-family: sans-serif;
+    font-size: large;
+    height: 100%;
+    background-color: #001722;
+    color: #F8F7F8;
+}
+
+header {
+   background: linear-gradient(180deg, #F8F7F8 50%, transparent 50%);
+    position: static;
+    color: #001722;
+    padding-top: 20px;
+    min-height: 200px;
+    width: 100%;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* Nav */
+nav {
+    padding-top: 20px;
+}
+
+nav > a{
+    position: sticky;  
+    color: #171717;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: xx-large;
+    padding: 20px;
+}
+
+nav > a:hover {
+    animation-name: dropDown;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+/* bio */ 
+
+.containerBio {
+  overflow: hidden;
+  position: relative;
+  align-content: center;
+}
+.bio {
+    position: relative;
+    padding: 20px;
+    border: 5px;
+    vertical-align: middle;
+    height:100%;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    width: 50%;
+    animation-name: headerFadeIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    background-color: #003A55;
+}
+
+.bioPicture{
+    display: inline-block;
+    align-self: left;
+    border-radius: 5%;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 4%;
+    height: fit-content;
+}
+
+.bioPicture > img {
+  border-radius: 5%;
+}
+
+.AboutMe{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 10px;
+    min-height: min-content;
+    border-left: 1px solid #F8F7F8;
+    
+}
+
+/* Skills */
+.containerSkills {
+  display: grid;
+  place-items: center;
+padding: 10%;
+  
+}
+.skills{
+    height: 100%;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+  
+.skillContainer{
+    text-align: center;
+    border-radius: 10px;
+    border: #001722 solid 10px;
+    padding: 20px;
+    width: 400px;
+    margin: 20px;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    
+}
+.skillContainer:hover {
+  border: #F8F7F8 solid 10px;
+}
+#skillContainer1{
+  transition-delay: .1s;
+  transition: all 1s;
+}
+#skillContainer2{
+  transition-delay: .2s;
+  transition: all 1.25s;
+}
+#skillContainer3{
+  transition-delay: .3s;
+  transition: all 1s;
+}
+#skillContainer4{
+  transition-delay: .4s;
+  transition: all 1.25s;
+}
+#skillContainer5{
+  transition-delay: .5s;
+  transition: all 1s;
+}
+#skillContainer6{
+  transition-delay: .6s;
+  transition: all 1.25s;
+}
+
+.show {
+  background-color: #003A55;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  margin: 20px;
+  filter: blur(0px);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+  .line1, .line2, .line3 {
+    background-color: #F8F7F8;
+    height: 2px;
+  }
+  .line1 {
+    width: 60%;
+  }
+  .line2 {
+    width: 40%;
+  }
+  .line3 {
+    width: 20%;
+  }
+
+
+
+  .projects {
+    height: 100%;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .projectContainer{
+    text-align: center;
+    border-radius: 10px;
+    border: #001722 solid 10px;
+    padding: 20px;
+    width: 800px;
+    margin: 20px;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+  }
+
+  .showUp {
+    background-color: #003A55;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    filter: blur(0px);
+    transform: translateX(0%);
+    opacity: 1;
+    transition-delay: .2s;
+    transition: all 1s;
+  }
+
+/* Animations */
+
+@keyframes dropDown {
+
+    from {}
+    to {
+      
+        color: #F8F7F8;
+        background-color: #003A55;
+        padding-bottom: 50px;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-top: 20px solid #171717;
+        border-radius: 0 0 5px 5px;}
+}
+
+@keyframes headerFadeIn {
+  from {
+      opacity: 0;
+   }
+   to{
+       opacity: 1;
+   }
+}
+
+@keyframes fade {
+    from {
+       background-color: white;
+       margin-right: 20px;
+     }
+     to{
+         background-color: #171717;
+     }
+}
