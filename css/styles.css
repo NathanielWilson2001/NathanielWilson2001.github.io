@@ -2,34 +2,39 @@ html {
     font-family: sans-serif;
     font-size: large;
     height: 100%;
-    background-color: #001722;
+    background-color: black;
     color: #F8F7F8;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    overflow-y: scroll;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 
-header {
-   background: linear-gradient(180deg, #F8F7F8 50%, transparent 50%);
-    position: static;
-    color: #001722;
-    padding-top: 20px;
-    min-height: 200px;
+header{
+  background-color: #F8F7F8;
+  height: 100%;
     width: 100%;
-    margin-top: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
 }
-
 /* Nav */
 nav {
+
+    margin: -.5%;
     padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #F8F7F8;
 }
 
 nav > a{
     position: sticky;  
-    color: #171717;
+    color: black;
     text-decoration: none;
     font-weight: 700;
     font-size: xx-large;
     padding: 20px;
+    margin-top: 20px;
+    height: max-content;
 }
 
 nav > a:hover {
@@ -48,18 +53,24 @@ nav > a:hover {
 .bio {
     position: relative;
     padding: 20px;
-    border: 5px;
+    border-radius: 10px;
+    border: #001722 solid 5px;
     vertical-align: middle;
     height:100%;
     margin: auto;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     width: 50%;
-    animation-name: headerFadeIn;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
     background-color: #003A55;
+    filter: blur(5px);
+    opacity: 0;
+}
+
+.showUp {
+  opacity: 1;
+  filter: blur(0px);
+  transition-delay: .2s;
+  transition: all 1.5s;
 }
 
 .bioPicture{
@@ -76,23 +87,31 @@ nav > a:hover {
   border-radius: 5%;
 }
 
-.AboutMe{
+.AboutMe, .Education{
     display: inline-block;
     vertical-align: top;
     text-align: left;
     padding-top: 50px;
     padding-left: 10px;
     min-height: min-content;
-    border-left: 1px solid #F8F7F8;
-    
+    border-left: 2px solid #F8F7F8;    
+}
+
+.AboutMe{
+  max-width: 40%;
+}
+.Education{
+  max-width: 100%;
+  padding-top: 20px;
 }
 
 /* Skills */
-.containerSkills {
+.containerSkills, .containerProjects {
+  position: relative;
   display: grid;
   place-items: center;
-padding: 10%;
-  
+  padding: 5%;
+
 }
 .skills{
     height: 100%;
@@ -113,9 +132,6 @@ padding: 10%;
     filter: blur(5px);
     transform: translateX(-100%);
     
-}
-.skillContainer:hover {
-  border: #F8F7F8 solid 10px;
 }
 #skillContainer1{
   transition-delay: .1s;
@@ -142,9 +158,14 @@ padding: 10%;
   transition: all 1.25s;
 }
 
-.show {
+.skillContainer:hover, .bio:hover, .projectContainer:hover {
+  border: #F8F7F8 solid 5px;
+  transition: 0ms;
+}
+
+.showLeft {
   background-color: #003A55;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 20px;
   width: 400px;
   margin: 20px;
@@ -166,9 +187,9 @@ padding: 10%;
   .line3 {
     width: 20%;
   }
-
-
-
+  
+  /* Projects */
+  
   .projects {
     height: 100%;
     padding-bottom: 20px;
@@ -180,7 +201,7 @@ padding: 10%;
   .projectContainer{
     text-align: center;
     border-radius: 10px;
-    border: #001722 solid 10px;
+    border: #001722 solid 5px;
     padding: 20px;
     width: 800px;
     margin: 20px;
@@ -189,7 +210,7 @@ padding: 10%;
     transform: translateX(100%);
   }
 
-  .showUp {
+  .showRight {
     background-color: #003A55;
     border-radius: 10px;
     padding: 20px;
@@ -201,6 +222,32 @@ padding: 10%;
     transition: all 1s;
   }
 
+/* Middle Flow Line */
+.connector{
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.flowLine{
+ /* border-left: dashed 4px #F8F7F8;
+  height: 800px;
+  background-color: #F8F7F8;
+  opacity: .8;   */
+  border-left: dashed 2px #F8F7F8;
+  height: 800px;
+  display: inline-block;
+  opacity: .8;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  background-color: #F8F7F8;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: .9; 
+}
+
 /* Animations */
 
 @keyframes dropDown {
@@ -210,28 +257,5 @@ padding: 10%;
       
         color: #F8F7F8;
         background-color: #003A55;
-        padding-bottom: 50px;
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
-        border-top: 20px solid #171717;
-        border-radius: 0 0 5px 5px;}
-}
-
-@keyframes headerFadeIn {
-  from {
-      opacity: 0;
-   }
-   to{
-       opacity: 1;
-   }
-}
-
-@keyframes fade {
-    from {
-       background-color: white;
-       margin-right: 20px;
-     }
-     to{
-         background-color: #171717;
      }
 }
