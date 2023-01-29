@@ -124,7 +124,7 @@ nav > a:hover {
 .skillContainer{
     text-align: center;
     border-radius: 10px;
-    border: #001722 solid 10px;
+    border: #001722 solid 5px;
     padding: 20px;
     width: 400px;
     margin: 20px;
@@ -159,7 +159,7 @@ nav > a:hover {
 }
 
 .skillContainer:hover, .bio:hover, .projectContainer:hover {
-  border: #F8F7F8 solid 5px;
+  border: #E0DCE0 solid 5px;
   transition: 0ms;
 }
 
@@ -200,7 +200,7 @@ nav > a:hover {
 
   .projectContainer{
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     border: #001722 solid 5px;
     padding: 20px;
     width: 800px;
@@ -212,7 +212,7 @@ nav > a:hover {
 
   .showRight {
     background-color: #003A55;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     margin: 20px;
     filter: blur(0px);
@@ -233,7 +233,7 @@ nav > a:hover {
   height: 800px;
   background-color: #F8F7F8;
   opacity: .8;   */
-  border-left: dashed 2px #F8F7F8;
+  border-left: dashed 2px #E0DCE0;
   height: 800px;
   display: inline-block;
   opacity: .8;
