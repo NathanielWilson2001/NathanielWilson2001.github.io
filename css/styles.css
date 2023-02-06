@@ -98,7 +98,7 @@ nav > a:hover {
   border-radius: 5%;
 }
 
-.AboutMe, .Education{
+.AboutMe, .Education, .Links{
     display: inline-block;
     vertical-align: top;
     text-align: left;
@@ -111,7 +111,7 @@ nav > a:hover {
 .AboutMe{
   max-width: 40%;
 }
-.Education{
+.Education, .Links{
   max-width: 100%;
   padding-top: 20px;
 }
