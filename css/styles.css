@@ -15,7 +15,7 @@ html::-webkit-scrollbar {
 header{
   background-color: #F8F7F8;
   height: 100%;
-    width: 100%;
+  width: 100%;
 }
 
 a{
@@ -170,7 +170,7 @@ nav > a:hover {
 }
 
 .skillContainer:hover, .bio:hover, .projectContainer:hover {
-  border: #E0DCE0 solid 5px;
+  border: #E0DCE0 solid 2.5px;
   transition: 0ms;
 }
 
