@@ -221,7 +221,9 @@ nav > a:hover {
     filter: blur(5px);
     transform: translateX(100%);
   }
-
+.projectContainer > p {
+  text-align: left;
+}
   .showRight {
     background-color: #003A55;
     border-radius: 5px;
@@ -256,6 +258,9 @@ nav > a:hover {
   opacity: .9; 
 }
 
+p {
+  text-align: "left";
+}
 /* Animations */
 
 @keyframes dropDown {
